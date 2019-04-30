@@ -32,6 +32,9 @@ with open(budget_data,newline="") as csv_file:
                         profit_changes.append(profit_change)
                 last_month_revenue = month_revenue
 
+sum_profit_changes = sum(profit_changes)
+avg_change = sum_profit_changes / (month_count-1)
+
 
 print(f"Total Months: {str(month_count)}")
 print(f"Total of Profit/Losses: ${net_total}")
