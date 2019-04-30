@@ -29,7 +29,7 @@ with open(budget_data, newline="") as csv_file:
             profit_changes.append(profit_change)
         last_month_revenue = month_revenue
 
-# analyze the month by month results
+#Calculations
 sum_rev_changes = sum(profit_changes)
 average_change = sum_rev_changes / (month_count - 1)
 max_change = max(profit_changes)
