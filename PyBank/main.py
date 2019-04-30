@@ -39,6 +39,7 @@ min_month_index = profit_changes.index(min_change)
 max_month = months[max_month_index]
 min_month = months[min_month_index]
 
+#Used to round average revenue change to 2 decimal places
 new_average_change = round(average_change,2)
 
 print("Financial Analysis")
@@ -48,3 +49,18 @@ print(f"Total Revenue: ${net_total}")
 print(f"Average Revenue Change: ${new_average_change}")
 print(f"Greatest Increase in Revenue: {max_month} (${max_change})")
 print(f"Greatest Decrease in Revenue: {min_month} (${min_change})")
+
+#Text file output path
+analysis_text_file = os.path.join("Financial Analysis.txt")
+
+#Creating text file with analysis results
+#Using \n to clean up and create 7 lines of text in text file otherwise
+#it would show as single line
+with open(analysis_text_file, 'w') as x:
+    x.write("Financial Analysis" +"\n")
+    x.write("----------------------------"+"\n")
+    x.write(f"Total Months: {month_count}"+"\n")
+    x.write(f"Total Revenue: ${net_total}"+"\n")
+    x.write(f"Average Revenue Change: ${new_average_change}"+"\n")
+    x.write(f"Greatest Increase in Revenue: {max_month} (${max_change})"+"\n")
+    x.write(f"Greatest Decrease in Revenue: {min_month} (${min_change})"+"\n") 
