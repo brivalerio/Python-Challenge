@@ -2,12 +2,23 @@ import os
 import csv
 
 #Path for election data file
-budget_data = os.path.join("Resources", "election_data.csv")
+election_data = os.path.join("Resources", "election_data.csv")
 
 #Variables
-total_votes = 0
-votes = []
+vote_count = 0
 
+with open(election_data, newline="") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+
+    csv_header = next(csv_reader)
+
+    for csv_header in csv_reader:
+        vote_count += 1
+
+
+print("Election Results")
+print("-------------------------")
+print(f"Total Votes: {vote_count}")
 
 
 
