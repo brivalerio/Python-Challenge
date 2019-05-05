@@ -31,6 +31,18 @@ with open(election_data, newline="") as csv_file:
             candidates.append(candidate_name)
             votes.append(1)
 
+#Finding vote % for each condidate
+#Adding new variables here to make it easier to keep track of
+percentage = []
+max_vote = votes[0]
+max_index = 0
+
+for count in range(len(candidates)):
+    vote_percent = votes[count]/vote_count * 100
+    percentage.append(vote_percent)
+
+    if
+
 
 print("Election Results")
 print("-------------------------")
