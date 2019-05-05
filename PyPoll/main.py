@@ -9,7 +9,6 @@ vote_count = 0
 votes = []
 candidates = []
 
-
 with open(election_data, newline="") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
 
