@@ -41,16 +41,21 @@ for count in range(len(candidates)):
     vote_percent = votes[count]/vote_count * 100
     percentage.append(vote_percent)
 
-    if
+    if votes[count] > max_vote:
+        max_vote = votes[count]
+        print(max_vote)
+        max_index = count
 
+winner = candidates[max_index]
 
 print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {vote_count}")
 print("-------------------------")
-
+for count in range(len(candidates)):
+    print(f"{candidates[count]}: {round((percentage[count]),3)}% ({votes[count]})")
 print("-------------------------")
-
+print(f"Winner: {winner}")
 print("-------------------------")
 
 #Text file output path
