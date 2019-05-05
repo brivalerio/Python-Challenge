@@ -1,4 +1,5 @@
 # Python-Challenge
+<<<<<<< HEAD
 
 Python Challenge included 2 excercises that encompassed real-world situations were completed using the Python scripting skills we learned in previous weeks.
 
@@ -28,3 +29,5 @@ The script that analyzed the votes and calculated each of the following:
 
 The script both printed the analysis to terminal and exported a text file with results.
 
+=======
+>>>>>>> 0b0bad850236f86407168a8328eaa2339bc20bc8
