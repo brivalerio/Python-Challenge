@@ -59,8 +59,18 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 #Text file output path
-#analysis_text_file = os.path.join("Election Results.txt")
+results_text_file = os.path.join("Election Results.txt")
 
 #Creating text file with election results
-#Using \n to clean up and create 9 lines of text in text file otherwise
-#it would show as single line
+#Using \n to clean up and create separate lines of text in text file
+#otherwise it would show as single line
+with open(results_text_file, 'w') as x:
+    x.write("Election Results" +"\n")
+    x.write("-------------------------" +"\n")
+    x.write(f"Total Votes: {vote_count}" +"\n")
+    x.write("-------------------------" +"\n")
+    for count in range(len(candidates)):
+        x.write(f"{candidates[count]}: {round((percentage[count]),3)}% ({votes[count]})" +"\n")
+    x.write("-------------------------" +"\n")
+    x.write(f"Winner: {winner}" +"\n")
+    x.write("-------------------------" +"\n")
